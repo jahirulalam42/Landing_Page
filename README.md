@@ -8,8 +8,7 @@ Welcome to the QuickToolz landing page! This project is built using **React** an
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -32,3 +31,21 @@ To get started with this project, clone the repository to your local machine:
 ```bash
 git clone  https://github.com/jahirulalam42/Landing_Page.git
 cd your-repo-name
+```
+
+Next, install the dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+Once the installation is complete, you can start the development server:
+
+```bash
+npm start
+```
+
+This will launch the landing page in your default browser at http://localhost:3000
+
