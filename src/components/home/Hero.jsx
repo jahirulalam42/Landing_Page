@@ -3,13 +3,15 @@ import Blue from "../../images/Hero_blue.png";
 import BubbleLg from "../../images/bubble_big.png";
 import BubbleMd from "../../images/bubble_medium.png";
 import BubbleSm from "../../images/bubble_small.png";
+import MiddleLight from "../../images/Ellipse 5.png";
+import demo from "../../images/1.png";
 
 const Hero = () => {
   return (
     <div className="min-h-fit bg-black relative z-0">
       {/* Hero Card */}
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 z-10 px-4 md:px-0 w-full max-w-2xl">
-        <div className="flex items-center justify-center rounded-3xl">
+        {/* <div className="flex items-center justify-center rounded-3xl">
           <div className="bg-zinc-900 rounded-lg shadow-lg p-5 md:p-12 text-gray-50">
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
@@ -63,7 +65,12 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+      <div className="absolute">
+        <img src={demo} alt="" className="" />
+      </div> 
+
       </div>
       {/* Hero Card End */}
 
@@ -76,12 +83,19 @@ const Hero = () => {
         <img src={BubbleMd} alt="" className="w-16 sm:w-24 md:w-32" />
       </div>
 
+      {/* <div className="absolute z-10 left-1/2 transform -translate-x-1/2 -translate-y-[12%]">
+        <img src={MiddleLight} alt="" className="" />
+      </div> */}
+
       <div className="absolute z-10 -top-5 left-1/2 transform -translate-x-1/2 md:-top-10 md:left-[45%]">
         <img src={BubbleSm} alt="" className="w-12 sm:w-16 md:w-24" />
       </div>
       {/* Bubble End */}
 
-      <div className="max-w-xl mx-auto text-center xl:max-w-3xl absolute z-10 top-[95%] left-1/2 transform -translate-x-1/2 px-4">
+      
+
+
+      <div className="max-w-xl mx-auto text-center xl:max-w-3xl absolute z-10 top-[100%] left-1/2 transform -translate-x-1/2 px-4">
         <h2 className="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
           Why It’s Perfect for LinkedIn
         </h2>

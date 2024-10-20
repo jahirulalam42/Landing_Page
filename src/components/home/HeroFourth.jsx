@@ -44,7 +44,7 @@ const HeroFourth = () => {
         </div>
         <div className="text-center">
           <p className="pb-4">
-            Total <br /> Comments <br /> Generated
+            Total Comments <br /> Generated
           </p>
           <p className="bg-black h-16 w-32 flex justify-center items-center rounded-lg">
             1 million+
@@ -68,10 +68,10 @@ const HeroFourth = () => {
         </div>
         <div className="text-center">
           <p className="pb-4">
-            Average <br /> Response <br /> Time
+            Average <br /> Response Time
           </p>
           <p className="bg-black h-16 w-32 flex justify-center items-center rounded-lg">
-            Under 5 <br /> seconds
+            Under 5 seconds
           </p>
         </div>
       </div>
