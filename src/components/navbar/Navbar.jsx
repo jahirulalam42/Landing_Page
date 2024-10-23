@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <div>
       <div>
+        <div></div>
         <div className="navbar bg-black text-white py-4 text-base flex">
+          =======
           <div className="flex-1 justify-center">
             <a href="/">
               <img src={Logo} alt="Homepage" className="w-56 mt-2 h-auto" />

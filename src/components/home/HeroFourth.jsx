@@ -36,7 +36,7 @@ const HeroFourth = () => {
         <p className="text-gray-300 mb-6">
           See how our LinkedIn extension is transforming conversations globally.
         </p>
-        <div className="flex justify-center gap-24">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
           {[
             { label: "Total Users", value: "Over 10,000" },
             { label: "Total Comments Generated", value: "1 million+" },

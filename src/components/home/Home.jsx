@@ -4,8 +4,11 @@ import HeroSecond from "./HeroSecond";
 import HeroThird from "./HeroThird";
 import HeroFourth from "./HeroFourth";
 import HeroFifth from "./HeroFifth";
+
 import Slider from "./Slider";
 import ReviewCard from "./ReviewCard";
+
+import FAQ from "./Faq";
 
 const Home = () => {
   return (
@@ -17,6 +20,7 @@ const Home = () => {
       <Slider />
       <ReviewCard />
       <HeroFifth />
+      <FAQ />
     </div>
   );
 };
