@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const FAQItem = ({ question, answer }) => {
         <span>{question}</span>
         <svg
           className={`fill-current text-blue-600 h-6 w-6 transform transition-transform duration-500 ${
-            isOpen ? 'rotate-180' : ''
+            isOpen ? "rotate-180" : ""
           }`}
           viewBox="0 0 20 20"
         >
@@ -25,7 +25,7 @@ const FAQItem = ({ question, answer }) => {
       </h2>
       <div
         className={`border-l-4 border-blue-600 overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? 'max-h-screen' : 'max-h-0'
+          isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
         <p className="p-5 text-gray-300">{answer}</p>
@@ -37,45 +37,48 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqData = [
     {
-      question: 'How many comments can I generate per day?',
+      question: "How many comments can I generate per day?",
       answer:
-        'You can generate up to 10 comments for free each day. The limit resets daily.',
+        "You can generate up to 10 comments for free each day. The limit resets daily.",
     },
     {
-      question: 'Is there a premium version available?',
+      question: "Is there a premium version available?",
       answer:
-        'Not yet, but a premium subscription with more features is currently in development!',
+        "Not yet, but a premium subscription with more features is currently in development!",
     },
     {
-      question: 'How does tone selection work?',
+      question: "How does tone selection work?",
       answer:
-        'You can choose from a list of tones, and our AI will generate a comment that fits the post content and your selected tone.',
+        "You can choose from a list of tones, and our AI will generate a comment that fits the post content and your selected tone.",
     },
     {
-      question: 'Can I use this extension on posts in different languages?',
+      question: "Can I use this extension on posts in different languages?",
       answer:
-        'The extension understands posts in multiple languages but generates responses only in English.',
+        "The extension understands posts in multiple languages but generates responses only in English.",
     },
     {
-      question: 'What happens if I reach the daily comment limit?',
-      answer: 'After reaching the limit of 10 comments, you’ll need to wait for the next day when it resets. If you urgently need more comments, email us, and we can upgrade your plan.',
+      question: "What happens if I reach the daily comment limit?",
+      answer:
+        "After reaching the limit of 10 comments, you’ll need to wait for the next day when it resets. If you urgently need more comments, email us, and we can upgrade your plan.",
     },
     {
-      question: 'Do I need a LinkedIn account to use this extension?',
-      answer: 'Yes, you need to be logged in to LinkedIn to use the extension.',
+      question: "Do I need a LinkedIn account to use this extension?",
+      answer: "Yes, you need to be logged in to LinkedIn to use the extension.",
     },
     {
-      question: 'Is my data secure while using this extension?',
-      answer: 'Yes, your data is kept secure, and we prioritize your privacy and safety.',
+      question: "Is my data secure while using this extension?",
+      answer:
+        "Yes, your data is kept secure, and we prioritize your privacy and safety.",
     },
     {
-      question: 'What if I need a tone that’s not in the list?',
-      answer: 'If you need a specific tone urgently, email us, and we’ll upgrade your plan to accommodate your request right away!',
+      question: "What if I need a tone that’s not in the list?",
+      answer:
+        "If you need a specific tone urgently, email us, and we’ll upgrade your plan to accommodate your request right away!",
     },
   ];
 
   return (
-    <main className="p-5 bg-neutral-900 min-h-screen">
+    <main className="p-5 bg-neutral-900 min-h-fit pb-20">
       <div className="flex justify-center items-start my-2">
         <div className="w-full sm:w-10/12 lg:w-10/12 xl:w-9/12">
           <div className="max-w-xl mx-auto text-center xl:max-w-2xl py-10 px-4">
@@ -85,14 +88,26 @@ const FAQ = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
             <ul>
-              {faqData.slice(0, Math.ceil(faqData.length / 2)).map((faq, index) => (
-                <FAQItem key={index} question={faq.question} answer={faq.answer} />
-              ))}
+              {faqData
+                .slice(0, Math.ceil(faqData.length / 2))
+                .map((faq, index) => (
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
+                ))}
             </ul>
             <ul>
-              {faqData.slice(Math.ceil(faqData.length / 2)).map((faq, index) => (
-                <FAQItem key={index} question={faq.question} answer={faq.answer} />
-              ))}
+              {faqData
+                .slice(Math.ceil(faqData.length / 2))
+                .map((faq, index) => (
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
+                ))}
             </ul>
           </div>
         </div>
