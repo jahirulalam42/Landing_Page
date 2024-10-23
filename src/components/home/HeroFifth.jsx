@@ -5,18 +5,15 @@ import HeroBubbleSm from "../../images/HeroBubbleSm.png";
 
 const HeroFifth = () => {
   return (
-    <div className="min-h-fit bg-black pt-32 md:pt-96 pb-20 px-4">
-      <div className="flex flex-col md:flex-row gap-12 md:gap-28 items-center relative z-0">
+    <div className="min-h-fit bg-black pt-32 md:pt-20 pb-20 px-4">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-28 items-center relative">
         {/* Bubble */}
-
-        <div className="absolute z-10 -top-10 left-[10%]">
+        <div className="absolute -top-10 left-[10%]">
           <img src={HeroBubbleSm} alt="" />
         </div>
-
-        <div className="absolute z-10 top-[90%] left-[45%]">
+        <div className="absolute top-[80%] left-[45%]">
           <img src={HeroBubbleLg} alt="" />
         </div>
-
         {/* Bubble End */}
         <div className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
           <img

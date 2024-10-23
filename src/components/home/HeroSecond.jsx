@@ -7,6 +7,15 @@ const HeroSecond = () => {
   return (
     <section className="py-6 bg-black sm:py-12 lg:py-16">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="max-w-xl mx-auto text-center xl:max-w-2xl">
+          <h2 className="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
+            Why It’s Perfect for LinkedIn
+          </h2>
+          <p className="mb-4 text-gray-50 text-xl">
+            Transform your LinkedIn interactions with personalized,
+            <br /> impactful comments at the click of a button!
+          </p>
+        </div>
         <div className="grid max-w-4xl lg:max-w-6xl grid-cols-1 mx-auto mt-8 text-center gap-y-8 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left">
           <div className="relative">
             <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">

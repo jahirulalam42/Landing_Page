@@ -67,10 +67,9 @@ const Hero = () => {
           </div>
         </div> */}
 
-      <div className="absolute">
-        <img src={demo} alt="" className="" />
-      </div> 
-
+        <div className="absolute">
+          <img src={demo} alt="" className="" />
+        </div>
       </div>
       {/* Hero Card End */}
 
@@ -91,19 +90,6 @@ const Hero = () => {
         <img src={BubbleSm} alt="" className="w-12 sm:w-16 md:w-24" />
       </div>
       {/* Bubble End */}
-
-      
-
-
-      <div className="max-w-xl mx-auto text-center xl:max-w-3xl absolute z-10 top-[100%] left-1/2 transform -translate-x-1/2 px-4">
-        <h2 className="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
-          Why It’s Perfect for LinkedIn
-        </h2>
-        <p className="mb-4 text-gray-50 text-xl">
-          Transform your LinkedIn interactions with personalized,
-          <br /> impactful comments at the click of a button!
-        </p>
-      </div>
 
       <div className="text-gray-50 flex flex-col gap-4 py-8 md:py-16 relative z-10 px-4">
         <h1 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl">
