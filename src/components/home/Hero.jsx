@@ -99,9 +99,59 @@ const Hero = () => {
           Generate engaging comments tailored to your tone and content!
         </p>
         <div className="flex justify-center">
-          <button className="btn btn-ghost bg-gradient-to-r from-blue-400 to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm md:text-lg">
+          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-blue-400 to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm md:text-lg transition-all duration-800 ease-in-out">
             <div className="indicator">Download Extension</div>
           </button>
+          <style jsx>{`
+            @keyframes glowRotate {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+
+            .slow-glow-button {
+              position: relative;
+              overflow: hidden;
+              padding: 10px 20px;
+            }
+
+            .slow-glow-button::before {
+              content: '';
+              position: absolute;
+              top: -150%;
+              left: -150%;
+              height: 400%;
+              width: 400%;
+              background: conic-gradient(
+                transparent,
+                transparent,
+                transparent,
+                #ffffff
+              );
+              animation: glowRotate 4s linear infinite;
+            }
+
+            .slow-glow-button::after {
+              content: '';
+              position: absolute;
+              inset: 2px;
+              background: inherit; /* Inherits your gradient background */
+              z-index: 1;
+              border-radius: inherit;
+            }
+
+            .slow-glow-button:hover::before {
+              animation-duration: 2s;
+            }
+
+            .slow-glow-button > * {
+              position: relative;
+              z-index: 2;
+            }
+          `}</style>
         </div>
       </div>
 
