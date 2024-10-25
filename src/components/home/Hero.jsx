@@ -11,7 +11,6 @@ const Hero = () => {
     <div className="min-h-fit bg-black relative z-0 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 z-10 px-4 md:px-0 w-full max-w-2xl">
-
         <div className="absolute">
           <img src={demo} alt="" className="" />
         </div>
@@ -44,9 +43,10 @@ const Hero = () => {
           Generate engaging comments tailored to your tone and content!
         </p>
         <div className="flex justify-center">
-          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-blue-400 to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm md:text-lg transition-all duration-800 ease-in-out">
+          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-blue-400 to-blue-950 text-white border-0 shadow-md text-sm md:text-lg transition-all duration-700 ease-in-out hover:from-blue-950 hover:to-blue-400 hover:duration-700">
             <div className="indicator">Download Extension</div>
           </button>
+
           <style jsx>{`
             @keyframes glowRotate {
               0% {
@@ -64,7 +64,7 @@ const Hero = () => {
             }
 
             .slow-glow-button::before {
-              content: '';
+              content: "";
               position: absolute;
               top: -150%;
               left: -150%;
@@ -80,7 +80,7 @@ const Hero = () => {
             }
 
             .slow-glow-button::after {
-              content: '';
+              content: "";
               position: absolute;
               inset: 2px;
               background: inherit; /* Inherits your gradient background */

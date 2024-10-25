@@ -50,27 +50,27 @@ export default function NewSlider() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-16 px-4">
+    <section className="bg-zinc-900 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4">
             Engage in a Snap: Click, Engage, Done!
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-lg text-gray-300">
             Transform your LinkedIn interactions with personalized, impactful
             comments at the click of a button!
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
           <div className="w-full lg:w-1/2 space-y-4">
             {content.map((item, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 p-6 rounded-lg ${
+                className={`cursor-pointer transition-all duration-300 p-6 rounded-lg shadow-md ${
                   selectedIndex === index
-                    ? "bg-blue-600 text-white"
-                    : "bg-white hover:bg-blue-100"
+                    ? "bg-blue-800 text-white" // Active color
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600" // Inactive color
                 }`}
                 onClick={() => handleContentChange(index)}
                 onKeyDown={(e) =>
@@ -84,14 +84,14 @@ export default function NewSlider() {
                   <div className="text-4xl font-bold">{index + 1}</div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-700">{item.description}</p>
+                    <p className="text-gray-200">{item.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 ">
             <div className="relative aspect-video">
               <img
                 src={content[selectedIndex].img}
