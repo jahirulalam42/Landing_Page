@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import img1 from "../../images/1.png";
+import img2 from "../../images/2.png";
+import img3 from "../../images/3.png";
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0); // State to manage the active slide
@@ -11,10 +14,9 @@ const Slider = () => {
 
   const sections = [
     {
-      title: "Marketing",
-      description: "Description for Marketing",
-      bgImage:
-        "url('https://images.unsplash.com/photo-1718241905696-cb34c2c07bed?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Replace with your image path
+      title: "Click to Spark Conversations!",
+      description: "Tired of crafting comments from scratch? Just click the LinkedGage icon attached to every post’s comment section, and you’re ready to roll.",
+      bgImage: `url(${img1})`, // Replace with your image path
       icon: (
         <svg
           className={`w-8 h-8 lg:w-8 lg:h-8 ${
@@ -29,10 +31,9 @@ const Slider = () => {
       ),
     },
     {
-      title: "Legal",
-      description: "Description for Legal",
-      bgImage:
-        "url('https://images.unsplash.com/photo-1716436329475-4c55d05383bb?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Replace with your image path
+      title: "Tone It Up",
+      description: "Choose the right tone for any post—whether you want to sound professional, supportive, or enthusiastic, LinkedGage’s popup offers various emotions for perfectly tailored responses.",
+      bgImage: `url(${img2})`, // Replace with your image path
       icon: (
         <svg
           className={`w-8 h-8 lg:w-8 lg:h-8 ${
@@ -47,10 +48,9 @@ const Slider = () => {
       ),
     },
     {
-      title: "Business Automation",
-      description: "Description for Business Automation",
-      bgImage:
-        "url('https://plus.unsplash.com/premium_photo-1682464548221-715397510bbf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Replace with your image path
+      title: "Your Comment, Your Way",
+      description: "Once your comment is generated, it’s placed directly in the comment box. Feel free to edit it or simply hit ‘Comment’ to share it instantly.",
+      bgImage: `url(${img3})`, // Replace with your image path
       icon: (
         <svg
           className={`w-8 h-8 lg:w-8 lg:h-8 ${

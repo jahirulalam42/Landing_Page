@@ -17,40 +17,52 @@ const ReviewCard = () => {
 
   const reviews = [
     {
-      name: "Sheryl Berge",
+      name: "John Williams",
       image: "https://randomuser.me/api/portraits/men/15.jpg",
       review:
-        "I love the fitness apparel and gear I purchased from this site. The quality is exceptional and the prices are unbeatable.",
+        "This extension has completely transformed the way I engage on LinkedIn. I no longer spend hours trying to craft the perfect comment—now it’s done in seconds, and the results are spot on!",
     },
     {
-      name: "Leland Kiehn",
+      name: "Emily Chen",
       image: "https://randomuser.me/api/portraits/women/15.jpg",
       review:
-        "As a professional athlete, I rely on high-performance gear for my training. This site offers a great selection of top-notch products.",
+        "I was skeptical at first, but this tool has been a game-changer. The tone options are so accurate, and it saves me so much time. It’s a must-have for anyone serious about LinkedIn engagement.",
     },
     {
-      name: "Peter Renolds",
+      name: "David Ramirez",
       image: "https://randomuser.me/api/portraits/men/10.jpg",
       review:
-        "The fitness apparel I bought here fits perfectly and feels amazing. I highly recommend this store to anyone looking for quality gear.",
+        "This extension helps me stay consistent with commenting without burning out. My engagement has improved, and I’m able to focus on other tasks while still maintaining a presence on LinkedIn.",
     },
     {
-      name: "Emma Johnson",
+      name: "Sophia Patel",
       image: "https://randomuser.me/api/portraits/women/20.jpg",
       review:
-        "The customer service is outstanding. They helped me find the perfect workout equipment for my home gym setup.",
+        "I love how intuitive this tool is. It generates thoughtful comments that feel authentic to my tone, and I’ve seen a noticeable increase in engagement on my posts.",
     },
     {
-      name: "Michael Chen",
+      name: "Liam Anderson",
       image: "https://randomuser.me/api/portraits/men/25.jpg",
       review:
-        "I've been a loyal customer for years. The quality and durability of their products are unmatched in the fitness industry.",
+        "Coming up with daily comments used to be such a chore, but this extension has made it effortless. The tone selection feature is incredibly useful for keeping my comments relevant and impactful.",
     },
     {
-      name: "Sophia Rodriguez",
+      name: "Rachel Kim",
       image: "https://randomuser.me/api/portraits/women/30.jpg",
       review:
-        "The variety of fitness accessories available is impressive. I always find what I need for my yoga and pilates sessions.",
+        "This tool has streamlined my entire LinkedIn engagement process. The AI-generated comments sound professional, and I love how I can customize the tone to suit different posts.",
+    },
+    {
+      name: "Oliver Green",
+      image: "https://randomuser.me/api/portraits/women/30.jpg",
+      review:
+        "It’s like having a personal assistant for LinkedIn! The time I’ve saved using this extension is incredible, and the comments are always on point.",
+    },
+    {
+      name: "Hannah Lewis",
+      image: "https://randomuser.me/api/portraits/women/30.jpg",
+      review:
+        "As someone who relies on LinkedIn for networking, this extension has been a lifesaver. I can quickly engage with multiple posts without sacrificing quality. Highly recommend!",
     },
   ];
 

@@ -7,8 +7,10 @@ import HeroFifth from "./HeroFifth";
 
 import Slider from "./Slider";
 import ReviewCard from "./ReviewCard";
+import SliderComponent from "./SliderComponent";
 
 import FAQ from "./Faq";
+import NewSlider from "./NewSlider";
 
 const Home = () => {
   return (
@@ -18,6 +20,7 @@ const Home = () => {
       <HeroThird />
       <HeroFourth />
       <Slider />
+      <NewSlider/>
       <ReviewCard />
       <HeroFifth />
       <FAQ />
