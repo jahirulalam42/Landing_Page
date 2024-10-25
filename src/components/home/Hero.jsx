@@ -8,7 +8,7 @@ import demo from "../../images/1.png";
 
 const Hero = () => {
   return (
-    <div className="min-h-fit bg-black relative z-0">
+    <div className="min-h-fit bg-black relative z-0 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 z-10 px-4 md:px-0 w-full max-w-2xl">
         {/* <div className="flex items-center justify-center rounded-3xl">
@@ -82,9 +82,9 @@ const Hero = () => {
         <img src={BubbleMd} alt="" className="w-16 sm:w-24 md:w-32" />
       </div>
 
-      {/* <div className="absolute z-10 left-1/2 transform -translate-x-1/2 -translate-y-[12%]">
-        <img src={MiddleLight} alt="" className="" />
-      </div> */}
+      <div className="absolute z-10 left-1/2 transform -translate-x-1/2 -translate-y-[12%]">
+        <img src={MiddleLight} alt="Middle Light" className="" />
+      </div>
 
       <div className="absolute z-10 -top-5 left-1/2 transform -translate-x-1/2 md:-top-10 md:left-[45%]">
         <img src={BubbleSm} alt="" className="w-12 sm:w-16 md:w-24" />
