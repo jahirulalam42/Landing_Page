@@ -71,7 +71,7 @@ const ReviewCard = () => {
       <section
         id="testimonials"
         aria-label="What our customers are saying"
-        className="bg-black py-20 sm:py-32"
+        className="py-20 sm:py-32 op-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl md:text-center">

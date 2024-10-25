@@ -5,6 +5,7 @@ import sixth from "../../images/sixth.png";
 import seven from "../../images/seven.png";
 import eight from "../../images/eight.png";
 import nine from "../../images/nine.png";
+import AnimatedGradientBorderTW from "./AnimatedGradientBorderTW";
 
 const HeroThird = () => {
   return (
@@ -22,41 +23,43 @@ const HeroThird = () => {
         </div>
         <div className="grid max-w-4xl lg:max-w-6xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left py-10">
           <div className="relative">
-            <div className="absolute -inset-1">
-              <div className="w-full h-full rotate-180 opacity-30 blur-lg filter"></div>
-            </div>
-            <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
-              <div className="p-9 text-center">
-                <div className="flex justify-center">
-                  <img src={fourth} alt="" />
+            <AnimatedGradientBorderTW>
+              <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
+                <div className="p-9 text-center">
+                  <div className="flex justify-center">
+                    <img src={fourth} alt="Feature Icon" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
+                    Tone Selection
+                  </h3>
+                  <p className="mt-6 text-base text-gray-50">
+                    Easily pick from professional, casual, and other custom tones
+                    for LinkedIn comments.
+                  </p>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
-                  Tone Selection
-                </h3>
-                <p className="mt-6 text-base text-gray-50">
-                  Easily pick from professional, casual, and other custom tones
-                  for LinkedIn comments.
-                </p>
               </div>
-            </div>
-          </div>
-          <div className="overflow-hidden bg-gray-800 shadow-md rounded-xl">
-            <div className="p-9 text-center">
-              <div className="flex justify-center">
-                <img src={fifth} alt="" />
-              </div>
-              <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
-                AI-Driven Comments
-              </h3>
-              <p className="mt-6 text-base text-gray-50">
-                Get smart, context-aware comments generated for any post.
-              </p>
-            </div>
+            </AnimatedGradientBorderTW>
           </div>
           <div className="relative">
-            <div className="absolute -inset-1">
-              <div className="w-full h-full rotate-180 opacity-30 blur-lg filter"></div>
-            </div>
+            <AnimatedGradientBorderTW>
+              <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
+                <div className="p-9 text-center">
+                  <div className="flex justify-center">
+                    <img src={nine} alt="Feature Icon" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
+                    Engagement Optimization
+                  </h3>
+                  <p className="mt-6 text-base text-gray-50">
+                    Tailor comments to improve visibility and interactions on your
+                    posts and network.
+                  </p>
+                </div>
+              </div>
+            </AnimatedGradientBorderTW>
+          </div>
+          <div className="relative">
+            <AnimatedGradientBorderTW>
             <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
               <div className="p-9 text-center">
                 <div className="flex justify-center">
@@ -71,12 +74,10 @@ const HeroThird = () => {
                 </p>
               </div>
             </div>
+            </AnimatedGradientBorderTW>
           </div>
-
           <div className="relative">
-            <div className="absolute -inset-1">
-              <div className="w-full h-full rotate-180 opacity-30 blur-lg filter"></div>
-            </div>
+            <AnimatedGradientBorderTW>
             <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
               <div className="p-9 text-center">
                 <div className="flex justify-center">
@@ -91,39 +92,43 @@ const HeroThird = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="overflow-hidden bg-gray-800 shadow-md rounded-xl">
-            <div className="p-9 text-center">
-              <div className="flex justify-center">
-                <img src={eight} alt="" />
-              </div>
-              <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
-                Seamless LinkedIn Integration
-              </h3>
-              <p className="mt-6 text-base text-gray-50">
-                A convenient icon in every post's comment section makes it easy
-                to access the extension.
-              </p>
-            </div>
+            </AnimatedGradientBorderTW>
           </div>
           <div className="relative">
-            <div className="absolute -inset-1">
-              <div className="w-full h-full rotate-180 opacity-30 blur-lg filter"></div>
-            </div>
-            <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
-              <div className="p-9 text-center">
-                <div className="flex justify-center">
-                  <img src={nine} alt="" />
+            <AnimatedGradientBorderTW>
+              <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
+                <div className="p-9 text-center">
+                  <div className="flex justify-center">
+                    <img src={eight} alt="" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
+                    Seamless LinkedIn Integration
+                  </h3>
+                  <p className="mt-6 text-base text-gray-50">
+                    A convenient icon in every post's comment section makes it easy
+                    to access the extension.
+                  </p>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
-                  Engagement Optimization
-                </h3>
-                <p className="mt-6 text-base text-gray-50">
-                  Tailor comments to improve visibility and interactions on your
-                  posts and network.
-                </p>
-              </div>
             </div>
+            </AnimatedGradientBorderTW>
+          </div>
+          <div className="relative">
+            <AnimatedGradientBorderTW>
+              <div className="relative overflow-hidden bg-gray-800 shadow-md rounded-xl h-full">
+                <div className="p-9 text-center">
+                  <div className="flex justify-center">
+                    <img src={nine} alt="" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-gray-50 sm:mt-10">
+                    Engagement Optimization
+                  </h3>
+                  <p className="mt-6 text-base text-gray-50">
+                    Tailor comments to improve visibility and interactions on your
+                    posts and network.
+                  </p>
+                </div>
+              </div>
+            </AnimatedGradientBorderTW>
           </div>
         </div>
       </div>

@@ -11,61 +11,6 @@ const Hero = () => {
     <div className="min-h-fit bg-black relative z-0 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 z-10 px-4 md:px-0 w-full max-w-2xl">
-        {/* <div className="flex items-center justify-center rounded-3xl">
-          <div className="bg-zinc-900 rounded-lg shadow-lg p-5 md:p-12 text-gray-50">
-            <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-                Quick<span className="text-indigo-600">Toolz</span>
-              </h2>
-              <h3 className="text-lg md:text-2xl mt-6">Coming Soon</h3>
-              <p className="text-sm md:text-lg mt-6">
-                <a className="hover:underline" href="#">
-                  Quicktoolz
-                </a>{" "}
-                is a website that provides simple productivity tools for your
-                daily needs online for free.
-              </p>
-            </div>
-            <div className="flex flex-wrap mt-6 justify-center">
-              <div className="m-2">
-                <a
-                  href="#"
-                  title="Quicktoolz On Facebook"
-                  className="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-4"
-                >
-                  Facebook
-                </a>
-              </div>
-              <div className="m-2">
-                <a
-                  href="#"
-                  title="Quicktoolz On Twitter"
-                  className="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-blue-500 hover:bg-blue-500 hover:text-white shadow-md py-2 px-4"
-                >
-                  Twitter
-                </a>
-              </div>
-              <div className="m-2">
-                <a
-                  href="#"
-                  title="Quicktoolz On Pinterest"
-                  className="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-red-600 hover:bg-red-600 hover:text-white shadow-md py-2 px-4"
-                >
-                  Pinterest
-                </a>
-              </div>
-              <div className="m-2">
-                <a
-                  href="#"
-                  title="Quicktoolz On Reddit"
-                  className="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-2 border-orange-500 hover:bg-orange-500 hover:text-white shadow-md py-2 px-4"
-                >
-                  Reddit
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         <div className="absolute">
           <img src={demo} alt="" className="" />

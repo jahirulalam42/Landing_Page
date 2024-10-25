@@ -17,10 +17,9 @@ const Home = () => {
     <div className="relative">
       <Hero />
       <HeroSecond />
+      <NewSlider/>
       <HeroThird />
       <HeroFourth />
-      <Slider />
-      <NewSlider/>
       <ReviewCard />
       <HeroFifth />
       <FAQ />
