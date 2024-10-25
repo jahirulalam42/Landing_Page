@@ -26,73 +26,77 @@ const content = [
 
 export default function NewSlider() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(true); // Initial fade-in set to true
+  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setFadeIn(false); // Start fading out
-      setTimeout(() => {
-        setSelectedIndex((prevIndex) => (prevIndex + 1) % content.length);
-        setFadeIn(true); // Start fading in after image has changed
-      }, 300); // Wait for fade-out duration before changing image
-    }, 5000);
+      changeContent(selectedIndex + 1);
+    }, 5000); // Change image every 5 seconds
     return () => clearInterval(timer);
-  }, []);
+  }, [selectedIndex]);
+
+  const changeContent = (newIndex) => {
+    setFadeIn(false); // Start fading out
+    setTimeout(() => {
+      setSelectedIndex(newIndex % content.length); // Wrap around
+      setFadeIn(true); // Start fading in
+    }, 300); // Wait for fade-out duration
+  };
 
   const handleContentChange = (index) => {
     if (index !== selectedIndex) {
-      setFadeIn(false); // Start fading out
-      setTimeout(() => {
-        setSelectedIndex(index); // Change the image
-        setFadeIn(true); // Start fading in
-      }, 300); // Wait for fade-out duration before fading in new image
+      changeContent(index);
     }
   };
 
   return (
-    <section className="bg-zinc-900 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4">
+    <div className="relative bg-black min-h-screen">
+      <div className="absolute inset-0 bg-black opacity-75"></div>
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 lg:px-12">
+        <header className="text-center pb-28">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-10">
             Engage in a Snap: Click, Engage, Done!
-          </h2>
+          </h1>
           <p className="text-lg text-gray-300">
             Transform your LinkedIn interactions with personalized, impactful
             comments at the click of a button!
           </p>
-        </div>
+        </header>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="w-full lg:w-1/2 space-y-4">
             {content.map((item, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 p-6 rounded-lg shadow-md ${
+                className={`flex items-start min-h-[100px] mb-2 p-5 border border-transparent rounded-lg cursor-pointer transition-transform transform ${
                   selectedIndex === index
-                    ? "bg-blue-800 text-white" // Active color
-                    : "bg-gray-700 text-gray-300 hover:bg-gray-600" // Inactive color
+                    ? "bg-[#2c3e50] scale-105 text-white"
+                    : "bg-transparent text-gray-300 hover:bg-gray-600"
                 }`}
                 onClick={() => handleContentChange(index)}
-                onKeyDown={(e) =>
-                  e.key === "Enter" && handleContentChange(index)
-                }
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    handleContentChange(index);
+                  }
+                }}
                 tabIndex={0}
                 role="button"
                 aria-pressed={selectedIndex === index}
               >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl font-bold">{index + 1}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-200">{item.description}</p>
-                  </div>
+                {selectedIndex === index && (
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded"></div>
+                )}
+                <div className="text-3xl font-bold mr-5">{`${index + 1}/`}</div>
+                <div>
+                  <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-400">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="w-full lg:w-1/2 ">
-            <div className="relative aspect-video">
+          <div className="w-full lg:w-1/2">
+            <div className="relative w-full aspect-video">
               <img
                 src={content[selectedIndex].img}
                 alt={content[selectedIndex].title}
@@ -104,6 +108,6 @@ export default function NewSlider() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
