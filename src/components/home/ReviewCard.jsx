@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Button from "./Button"; // Import the Button component
 
 const ReviewCard = () => {
   const swiperRef = useRef(null);
@@ -16,29 +18,30 @@ const ReviewCard = () => {
   }, []);
 
   const reviews = [
+    // Your reviews array remains unchanged
     {
       name: "John Williams",
       image: "https://randomuser.me/api/portraits/men/15.jpg",
       review:
-        "This extension has completely transformed the way I engage on LinkedIn. I no longer spend hours trying to craft the perfect comment—now it’s done in seconds, and the results are spot on!",
+        "This extension has completely transformed the way I engage on LinkedIn. I no longer spend hours trying to craft the perfect comment—now it's done in seconds, and the results are spot on!",
     },
     {
       name: "Emily Chen",
       image: "https://randomuser.me/api/portraits/women/15.jpg",
       review:
-        "I was skeptical at first, but this tool has been a game-changer. The tone options are so accurate, and it saves me so much time. It’s a must-have for anyone serious about LinkedIn engagement.",
+        "I was skeptical at first, but this tool has been a game-changer. The tone options are so accurate, and it saves me so much time. It's a must-have for anyone serious about LinkedIn engagement.",
     },
     {
       name: "David Ramirez",
       image: "https://randomuser.me/api/portraits/men/10.jpg",
       review:
-        "This extension helps me stay consistent with commenting without burning out. My engagement has improved, and I’m able to focus on other tasks while still maintaining a presence on LinkedIn.",
+        "This extension helps me stay consistent with commenting without burning out. My engagement has improved, and I'm able to focus on other tasks while still maintaining a presence on LinkedIn.",
     },
     {
       name: "Sophia Patel",
       image: "https://randomuser.me/api/portraits/women/20.jpg",
       review:
-        "I love how intuitive this tool is. It generates thoughtful comments that feel authentic to my tone, and I’ve seen a noticeable increase in engagement on my posts.",
+        "I love how intuitive this tool is. It generates thoughtful comments that feel authentic to my tone, and I've seen a noticeable increase in engagement on my posts.",
     },
     {
       name: "Liam Anderson",
@@ -54,16 +57,17 @@ const ReviewCard = () => {
     },
     {
       name: "Oliver Green",
-      image: "https://randomuser.me/api/portraits/women/30.jpg",
+      image: "https://randomuser.me/api/portraits/men/35.jpg",
       review:
-        "It’s like having a personal assistant for LinkedIn! The time I’ve saved using this extension is incredible, and the comments are always on point.",
+        "It's like having a personal assistant for LinkedIn! The time I've saved using this extension is incredible, and the comments are always on point.",
     },
     {
       name: "Hannah Lewis",
-      image: "https://randomuser.me/api/portraits/women/30.jpg",
+      image: "https://randomuser.me/api/portraits/women/40.jpg",
       review:
         "As someone who relies on LinkedIn for networking, this extension has been a lifesaver. I can quickly engage with multiple posts without sacrificing quality. Highly recommend!",
     },
+    // ... Other reviews
   ];
 
   return (
@@ -71,7 +75,7 @@ const ReviewCard = () => {
       <section
         id="testimonials"
         aria-label="What our customers are saying"
-        className="py-20 sm:py-32 op-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))"
+        className="py-20 sm:py-32 z-[-2] bg-neutral-950"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl md:text-center">
@@ -93,11 +97,11 @@ const ReviewCard = () => {
             }}
             pagination={{ clickable: true }}
             navigation={false}
-            style={{ padding: "0 40px" }}
+            style={{ padding: "0 20px" }}
           >
             {reviews.map((item, index) => (
-              <SwiperSlide key={index}>
-                <figure className="relative rounded-2xl bg-gray-800 p-6 shadow-xl shadow-slate-900/10 h-72">
+              <SwiperSlide key={index} className="relative">
+                <div className="flex flex-col items-center bg-gray-800 rounded-2xl p-6 shadow-xl h-full transition-transform transform hover:scale-105 min-h-[400px] overflow-hidden">
                   <div className="flex items-center mb-4">
                     {[...Array(5)].map((_, starIndex) => (
                       <svg
@@ -111,79 +115,36 @@ const ReviewCard = () => {
                       </svg>
                     ))}
                   </div>
-                  <blockquote className="relative flex-1">
-                    <p className="text-lg tracking-tight text-white">
+                  <blockquote className="flex-1 mb-6 overflow-hidden">
+                    <p className="text-lg tracking-tight text-white text-center">
                       {item.review}
                     </p>
                   </blockquote>
-                  <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                  <figcaption className="flex items-center justify-start mt-6 border-t border-slate-100 pt-6 w-full">
+                    <img
+                      alt={`Avatar of ${item.name}`}
+                      className="h-16 w-16 rounded-full border-2 border-gray-700 object-cover mr-4"
+                      src={item.image}
+                    />
                     <div>
-                      <div className="font-display text-base text-white">
+                      <div className="font-display text-lg text-white font-semibold">
                         {item.name}
                       </div>
                     </div>
-                    <div className="overflow-hidden rounded-full bg-slate-50">
-                      <img
-                        alt={`Avatar of ${item.name}`}
-                        className="h-14 w-14 object-cover"
-                        src={item.image}
-                      />
-                    </div>
                   </figcaption>
-                </figure>
+                </div>
               </SwiperSlide>
             ))}
+
+            {/* Improved Navigation buttons */}
+            <Button
+              swiperRef={swiperRef}
+              isBeginning={isBeginning}
+              isEnd={isEnd}
+            />
           </Swiper>
         </div>
       </section>
-
-      {/* Improved Navigation buttons */}
-      <button
-        onClick={() => swiperRef.current.swiper.slidePrev()}
-        className={`absolute top-1/2 left-4 transform -translate-y-1/2 z-20 flex items-center justify-center h-12 w-12 text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg transition duration-300 ${
-          isBeginning ? "opacity-50 cursor-not-allowed" : "hover:scale-110"
-        } focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75`}
-        disabled={isBeginning}
-        aria-label="Previous slide"
-      >
-        <svg
-          className="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
-      <button
-        onClick={() => swiperRef.current.swiper.slideNext()}
-        className={`absolute top-1/2 right-4 transform -translate-y-1/2 z-20 flex items-center justify-center h-12 w-12 text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-full shadow-lg transition duration-300 ${
-          isEnd ? "opacity-50 cursor-not-allowed" : "hover:scale-110"
-        } focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75`}
-        disabled={isEnd}
-        aria-label="Next slide"
-      >
-        <svg
-          className="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
     </div>
   );
 };
