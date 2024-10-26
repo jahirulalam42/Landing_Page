@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-
+const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <li className="bg-gray-800 my-3 shadow-lg text-white rounded-lg transition-all duration-300">
       <h2
-        onClick={handleClick}
+        onClick={onClick}
         className="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer hover:bg-gray-700 transition-colors duration-200 rounded-t-lg"
       >
         <span>{question}</span>
         <svg
-          className={`fill-current text-blue-600 h-6 w-6 transform transition-transform duration-500 ${
+          className={`fill-current text-lightBlue h-6 w-6 transform transition-transform duration-500 ${
             isOpen ? "rotate-180" : ""
           }`}
           viewBox="0 0 20 20"
@@ -24,9 +18,9 @@ const FAQItem = ({ question, answer }) => {
         </svg>
       </h2>
       <div
-        className={`border-l-4 border-blue-600 overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-screen" : "max-h-0"
-        }`}
+        className={`border-l-4 border-lightBlue overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-40" : "max-h-0"
+        }`} // Set a max height when open
       >
         <p className="p-5 text-gray-300">{answer}</p>
       </div>
@@ -35,6 +29,8 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const faqData = [
     {
       question: "How many comments can I generate per day?",
@@ -77,6 +73,10 @@ const FAQ = () => {
     },
   ];
 
+  const handleItemClick = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // Toggle the open index
+  };
+
   return (
     <main className="p-5 bg-neutral-900 min-h-fit pb-20">
       <div className="flex justify-center items-start my-2">
@@ -95,6 +95,8 @@ const FAQ = () => {
                     key={index}
                     question={faq.question}
                     answer={faq.answer}
+                    isOpen={openIndex === index}
+                    onClick={() => handleItemClick(index)}
                   />
                 ))}
             </ul>
@@ -106,6 +108,10 @@ const FAQ = () => {
                     key={index}
                     question={faq.question}
                     answer={faq.answer}
+                    isOpen={openIndex === index + Math.ceil(faqData.length / 2)} // Adjust index for the second column
+                    onClick={() =>
+                      handleItemClick(index + Math.ceil(faqData.length / 2))
+                    }
                   />
                 ))}
             </ul>
