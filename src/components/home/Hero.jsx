@@ -44,7 +44,7 @@ const Hero = () => {
           Generate engaging comments tailored to your tone and content!
         </p>
         <div className="flex justify-center">
-          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-blue-400 to-blue-950 text-white border-0 shadow-md text-sm md:text-lg transition-all duration-700 ease-in-out hover:from-blue-950 hover:to-blue-400 hover:duration-700">
+          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm md:text-lg transition-all duration-800 ease-in-out">
             <div className="indicator">Download Extension</div>
           </button>
 
