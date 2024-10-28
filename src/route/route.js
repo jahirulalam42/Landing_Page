@@ -3,6 +3,8 @@ import Layout from "../components/layout/Layout";
 import Home from "../components/home/Home";
 import Blog from "../components/blog/Blog";
 import Admin from "../components/admin/Admin";
+import OnePost from "../components/blog/OnePost";
+
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:slug",
+        element: <OnePost />,
       },
     ],
   },

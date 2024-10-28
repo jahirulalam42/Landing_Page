@@ -4,25 +4,24 @@ import HeroSecond from "./HeroSecond";
 import HeroThird from "./HeroThird";
 import HeroFourth from "./HeroFourth";
 import HeroFifth from "./HeroFifth";
-
-import Slider from "./Slider";
-import ReviewCard from "./ReviewCard";
-import SliderComponent from "./SliderComponent";
-
-import FAQ from "./Faq";
 import NewSlider from "./NewSlider";
+import ReviewCard from "./ReviewCard";
+import FAQ from "./Faq";
+import NewsletterSignup from "./NewsletterSignup";
+
 
 const Home = () => {
   return (
     <div className="relative">
-      <Hero />
-      <HeroSecond />
-      <NewSlider/>
-      <HeroThird />
-      <HeroFourth />
-      <ReviewCard />
-      <HeroFifth />
-      <FAQ />
+        <Hero />
+        <HeroSecond />
+        <NewSlider />
+        <HeroThird />
+        <HeroFourth />
+        <ReviewCard />
+        <HeroFifth />
+        <FAQ />
+        <NewsletterSignup/>
     </div>
   );
 };
