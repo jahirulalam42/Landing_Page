@@ -53,19 +53,20 @@ function NewSlider() {
   };
 
   return (
-    <div className="bg-black flex flex-col items-center min-h-fit px-12 py-32">
-      <div className="text-center">
-        <h1 className="text-white text-4xl font-bold mb-2">
+    <div className="bg-black flex flex-col items-center min-h-fit px-4 py-16 sm:px-12 md:py-32">
+      <div className="text-center mb-10">
+        <h1 className="text-white text-3xl sm:text-4xl font-bold mb-2">
           Engage in a Snap: Click, Engage, Done!
         </h1>
-        <p className="text-gray-400 text-lg mb-10">
+        <p className="text-gray-400 text-base sm:text-lg mb-10">
           Transform your LinkedIn interactions with personalized, impactful
           comments at the click of a button!
         </p>
       </div>
 
-      <div className="flex flex-wrap lg:flex-nowrap w-full">
-        <div className="flex flex-col w-full lg:w-1/2 mr-0 lg:mr-20">
+      <div className="flex flex-col lg:flex-row w-full">
+        {/* Mobile-specific style for content list */}
+        <div className="flex flex-col w-full lg:w-1/2 lg:mr-20 mb-8 lg:mb-0">
           {content.map((item, index) => (
             <div
               key={index}
@@ -114,6 +115,29 @@ function NewSlider() {
           </div>
         </div>
       </div>
+
+      {/* Mobile-specific styles */}
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .flex-col {
+              flex-direction: column;
+            }
+            .text-3xl {
+              font-size: 2rem; /* Adjust font size for mobile */
+            }
+            .text-lg {
+              font-size: 1.125rem; /* Adjust font size for mobile */
+            }
+            .bg-gray-800 {
+              background-color: #4b5563; /* Change background color for mobile */
+            }
+            .rounded-lg {
+              border-radius: 0.5rem; /* Smaller border radius for mobile */
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }
